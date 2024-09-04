@@ -38,13 +38,22 @@
 
 </head>
 <body>
-  	<audio 
+<!--   	<audio 
 		autoplay="autoplay"
 	   	controls="controls"
 	  	loop="loop"
 	  	preload="auto"
 	  	src="./333.mp3">
-	</audio>
+	</audio> -->
+<audio id="audioPlayer" loop preload="auto" src="./333.mp3"></audio>
+
+    <!-- JavaScript代码 -->
+<script>
+document.addEventListener('click', function() {
+    var audio = document.getElementById('audioPlayer');
+    audio.play();
+}, { once: true }); // 只在第一次点击时执行
+</script>
 <canvas id="pinkboard"></canvas>
 <script>
   var settings = {
